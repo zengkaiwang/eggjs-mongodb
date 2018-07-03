@@ -1,0 +1,26 @@
+{
+  "name": "eggjs_mongodb",
+  "version": "1.0.0",
+  "description": "aaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "egg-bin dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zengkaiwang/eggjs_mongodb.git"
+  },
+  "author": "scaler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zengkaiwang/eggjs_mongodb/issues"
+  },
+  "homepage": "https://github.com/zengkaiwang/eggjs_mongodb#readme",
+  "dependencies": {
+    "egg": "^2.9.1"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.7.1"
+  }
+}
