@@ -6,6 +6,12 @@ class PostService extends Service {
 		//注意：只有安装了插件egg-mongoose后 model才会挂载到this.ctx上
 		return this.ctx.model.Post.find().sort({ _id: -1}).exec();
 	}
+
+	//创建文章
+  async create(post) {
+      this.ctx.model.Post.create(post);
+  }	
+  	
 }
 
 module.exports = PostService;
