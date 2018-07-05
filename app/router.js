@@ -3,4 +3,5 @@ module.exports = app => {
   router.get('/', controller.home.index);
 
   router.get('/login', controller.vue.login);
+  router.get('/home/getAllData', controller.vue.getAllData);
 };
