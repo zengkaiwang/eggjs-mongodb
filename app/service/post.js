@@ -17,7 +17,12 @@ class PostService extends Service {
   	this.ctx.model.Post.remove({_id: id}, (err)=> {
       console.log(err, 'ttttt')
   	})
-  }  
+  } 
+
+  //查找某id的文章
+  async findById(id) {
+  	return this.ctx.model.Post.findById(id).exec();
+  }   
   	
 }
 

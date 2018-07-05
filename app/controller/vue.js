@@ -41,6 +41,19 @@ class VueController extends Controller {
     	console.log(e, "erererer");
     }
 	}
+	//获取单条详情
+	async getDetails() {
+    const {ctx, service} = this;
+    console.log(ctx.query)
+    const id = this.ctx.query.id;
+    const article = await service.post.findById(id);
+    if (article) {
+      this.ctx.body = article;
+    } else {
+      console.log('文章不存在或者文章已删除')
+    }		
+	}
+	
 }
 
 module.exports = VueController;

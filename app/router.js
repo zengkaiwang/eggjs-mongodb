@@ -6,4 +6,5 @@ module.exports = app => {
   router.get('/home/getAllData', controller.vue.getAllData);
   router.post('/posts/create', controller.vue.create);
   router.delete('/itemDelete', controller.vue.delete)	//删除单数数据
+  router.get('/getPostDetail', controller.vue.getDetails);	//获取单条数据
 };
