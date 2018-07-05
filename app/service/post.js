@@ -11,6 +11,13 @@ class PostService extends Service {
   async create(post) {
       this.ctx.model.Post.create(post);
   }	
+
+  //删除文章
+  async findAndRemove(id) {
+  	this.ctx.model.Post.remove({_id: id}, (err)=> {
+      console.log(err, 'ttttt')
+  	})
+  }  
   	
 }
 

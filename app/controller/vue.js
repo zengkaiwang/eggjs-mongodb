@@ -30,6 +30,17 @@ class VueController extends Controller {
     await service.post.create(post);
     this.ctx.body = '新建成功'
 	}	
+	//删除
+	async delete() {
+    const {ctx, service} = this;
+    const id = ctx.request.body.id;
+    try {
+	    await service.post.findAndRemove(id);		
+	    this.ctx.body = "删除成功"
+    } catch(e) {
+    	console.log(e, "erererer");
+    }
+	}
 }
 
 module.exports = VueController;
