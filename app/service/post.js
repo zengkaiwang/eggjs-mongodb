@@ -22,6 +22,11 @@ class PostService extends Service {
   //查找某id的文章
   async findById(id) {
   	return this.ctx.model.Post.findById(id).exec();
+  }  
+
+  //更新某id的文章
+  async update(id, post) {
+  	this.ctx.model.Post.findOneAndUpdate({_id: id}, post).exec();
   }   
   	
 }

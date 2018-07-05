@@ -53,7 +53,19 @@ class VueController extends Controller {
       console.log('文章不存在或者文章已删除')
     }		
 	}
-	
+	//更新数据
+	async update() {
+		const id = this.ctx.request.body.id;
+    const title = this.ctx.request.body.title;
+    const description = this.ctx.request.body.description;		
+    let post = {
+    	title: title,
+    	description: description
+    }
+    await this.service.post.update(id, post);
+    this.ctx.body = "更新成功"
+	}	
+
 }
 
 module.exports = VueController;
